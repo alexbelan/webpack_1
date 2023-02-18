@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Roboto;
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: orange
+}
+
+body {
+    background-image: url('./assets/summer-bg.jpg');
+    background-size: cover;
+    h1 {
+        text-align: center;
+    }
+    .input {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .btns {
+        display: flex;
+        width: 700px;
+        margin: auto;
+        justify-content: space-between;
+        .btn {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            border: 1px white solid;
+            &.btn_summer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('./assets/summer-bg.jpg');
+                background-size: cover;
+                .svg {
+                    width: 100px;
+                    content: url('./assets/icons/sun.svg');
+                    &.svg_pause {
+                        content: url('./assets/icons/pause.svg');
+                    }
+                }
+            }
+            &.btn_rain {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('./assets/rainy-bg.jpg');
+                background-size: cover;
+                .svg {
+                    width: 100px;
+                    content: url('./assets/icons/cloud-rain.svg');
+                    &.svg_pause {
+                        content: url('./assets/icons/pause.svg');
+                    }
+                }
+            }
+            &.btn_snow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('./assets/winter-bg.jpg');
+                background-size: cover;
+                .svg {
+                    width: 100px;
+                    content: url('./assets/icons/cloud-snow.svg');
+                    &.svg_pause {
+                        content: url('./assets/icons/pause.svg');
+                    }
+                }
+            }
+        }
+    }
+}
