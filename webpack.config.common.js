@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -27,22 +27,27 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.([cm]?ts|tsx)$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
                 test: /\.css$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
+                    'css-loader',
                 ],
             },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader",
+                    'css-loader',
+                    'sass-loader',
                 ],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|ogg|mp3|wav)$/i,
+                test: /\.(png|jpg|jpeg|gif|ogg|mp3|wav)$/i,
                 type: 'asset/resource',
             },
             {
@@ -51,5 +56,13 @@ module.exports = {
                 loader: 'svgo-loader'
             }
         ],
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
+        extensionAlias: {
+            '.js': ['.js', '.ts'],
+            '.cjs': ['.cjs', '.cts'],
+            '.mjs': ['.mjs', '.mts']
+        }
     },
 }

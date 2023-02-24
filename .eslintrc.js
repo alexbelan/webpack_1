@@ -1,15 +1,19 @@
 module.exports = {
-    parserOptions: {
-        parser: '@babel/eslint-parser',
-        requireConfigFile: false,
-        ecmaVersion: 2018,
-        sourceType: "module",
-    },
+    root: true,
+    parser: "@typescript-eslint/parser",
+    plugins: [
+        "@typescript-eslint"
+    ],
+    extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
     rules: {
-        "no-console": "warn",
-        "no-unused-vars": "warn",
-        "quotes": ["error", "single"],
-        "jsx-quotes": ["error", "prefer-single"],
-        "semi": ["error", "never"]
+        'no-console': 'warn',
+        'no-unused-vars': 'warn',
+        'quotes': ['error', 'single'],
+        'jsx-quotes': ['error', 'prefer-single'],
+        'semi': ['error', 'never']
     }
 }

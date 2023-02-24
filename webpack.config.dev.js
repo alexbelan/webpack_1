@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge')
 const path = require('path')
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin')
 const commonConfig = require('./webpack.config.common')
 
 module.exports = merge(commonConfig, {
