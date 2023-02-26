@@ -25,31 +25,31 @@ interface dataStateAll {
   [key: string]: dataState
 }
 
-const summerState: dataState = {
-  img: summerBg,
-  sound: summerSounds,
-  element: btnSummer,
-  currentTime: 0
-}
-
-const rainState: dataState = {
-  img: rainBg,
-  sound: rainSounds,
-  element: btnRain,
-  currentTime: 0
-}
-
-const snowState: dataState = {
-  img: snowBg,
-  sound: snowSounds,
-  element: btnSnow,
-  currentTime: 0
-}
+const arrayStates: dataState[] = [
+  {
+    img: summerBg,
+    sound: summerSounds,
+    element: btnSummer,
+    currentTime: 0
+  },
+  {
+    img: rainBg,
+    sound: rainSounds,
+    element: btnRain,
+    currentTime: 0
+  },
+  {
+    img: snowBg,
+    sound: snowSounds,
+    element: btnSnow,
+    currentTime: 0
+  }
+]
 
 const data: dataStateAll = {
-  summer: summerState,
-  rain: rainState,
-  snow: snowState,
+  summer: arrayStates[0],
+  rain: arrayStates[1],
+  snow: arrayStates[2],
 }
 
 const audio: HTMLAudioElement = new Audio()
