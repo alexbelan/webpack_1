@@ -1,14 +1,14 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
-        "module": "CommonJS",
+        "module": "ES2020",
         "target": "es5",
         "allowJs": true,
         "noImplicitAny": true,
         "moduleResolution": "node"
     },
     "include": [
-        "src/index.ts",
-        "src/index.d.ts"
+        "src/**/*",
+        "index.d.ts"
     ],
 }
